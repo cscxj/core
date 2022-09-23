@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.7.18",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
     "vite": "^3.0.0"
   }
 }
