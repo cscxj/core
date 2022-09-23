@@ -22,5 +22,5 @@ vue开发时使用`esbuild`构建，无法生成类型声明文件。
 可先通过构建命令生成类型文件：
 
 ```shell
-npm run build -- vue -f esm-browser -t
+pnpm run build -- -f esm-bundler -t -d
 ```
