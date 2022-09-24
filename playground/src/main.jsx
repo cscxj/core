@@ -1,9 +1,24 @@
-import { createApp } from 'vue'
+import { defineComponent, createApp, ref } from "vue";
+import "./index.less";
 
-function App() {
-  return <div>app</div>
-}
+const Comp = defineComponent({
+  setup(_, { slots }) {
+    return () => <div class="comp">{slots.default?.()}</div>;
+  },
+});
 
-const app = createApp(App)
+const App = defineComponent({
+  setup(_, {}) {
+    return () => (
+      <div class="app">
+        <Comp>
+          <div class="slot">aaa</div>
+        </Comp>
+      </div>
+    );
+  },
+});
 
-app.mount('#app')
+const app = createApp(App);
+app.mount("#app");
+console.log(app);
